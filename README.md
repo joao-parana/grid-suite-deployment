@@ -1,5 +1,26 @@
 # GridSuite local deployment
 
+
+## Git Workflow for update
+
+```
+git checkout DAS_DGA_0_11_0
+
+# Make your modifications in the source code and do the tests
+
+git add . ; git commit 'Your message' ; git push -u DAS_DGA_0_11_0
+
+# Make sure that you're on your master branch:
+
+git checkout main
+
+# Rewrite your main branch so that any commits of yours that
+# aren't already in upstream/main are replayed on top of that
+# other branch:
+
+git rebase upstream/main
+```
+
 ## Local setup
 
 ### Databases folders configuration
